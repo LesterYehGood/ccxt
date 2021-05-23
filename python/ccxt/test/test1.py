@@ -1,5 +1,6 @@
 import ccxt
 from ccxt.base.exchange import Exchange
+from tkinter import *
 
 symbol = 'ETH/USDT'
 
@@ -49,3 +50,11 @@ else:
     percentage = (( binance_close_price - ftx_close_price) / binance_close_price )
 
 print("percentage = " ,percentage)
+
+tk =Tk()
+tk.geometry("300x160")
+canvas = Canvas(tk, width=640, height= 480)
+canvas.pack()
+canvas.create_line(100,100,320,640)
+
+tk.mainloop()
