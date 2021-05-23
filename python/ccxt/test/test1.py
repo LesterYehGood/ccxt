@@ -44,8 +44,8 @@ print("close: " ,binance_close_price)
 print("ask: " ,binance_tickers[symbol]['ask'])
 
 if ( ftx_close_price >= binance_close_price ):
-    value = ((ftx_close_price - binance_close_price) / binance_close_price )
+    percentage = ((ftx_close_price - binance_close_price) / binance_close_price )
 else:
-    value = (( binance_close_price - ftx_close_price) / binance_close_price )
+    percentage = (( binance_close_price - ftx_close_price) / binance_close_price )
 
-print("value = " ,value)
+print("percentage = " ,percentage)
